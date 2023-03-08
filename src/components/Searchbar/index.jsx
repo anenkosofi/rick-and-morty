@@ -1,3 +1,7 @@
+import { BiSearchAlt2 } from 'react-icons/bi';
+
+import css from './Searchbar.module.css';
+
 export const Searchbar = ({ onSubmit }) => {
   const submitQuery = e => {
     e.preventDefault();
@@ -11,11 +15,13 @@ export const Searchbar = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={submitQuery}>
-      <button>
-        <span>Search</span>
+    <form className={css.searchForm} onSubmit={submitQuery}>
+      <button className={css.searchFormButton}>
+        <BiSearchAlt2 size={24} />
+        <span className={css.searchFormButtonLabel}>Search</span>
       </button>
       <input
+        className={css.searchFormInput}
         type="text"
         name="query"
         autoComplete="off"

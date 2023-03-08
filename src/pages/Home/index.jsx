@@ -7,6 +7,8 @@ import { CharactersList } from 'components/CharactersList';
 
 import { getAllCharacters, getCharacterByName } from 'services/rick&mortyAPI';
 
+import css from './Home.module.css';
+
 export const Home = () => {
   const [characters, setCharacters] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -34,7 +36,7 @@ export const Home = () => {
 
   return (
     <main>
-      <div>
+      <div className={css.container}>
         <Logo />
         <section>
           <Searchbar onSubmit={filterCharacters} />

@@ -1,9 +1,11 @@
 import logoPicture from '../../images/rickandmortylogo.png';
 
+import css from './Logo.module.css';
+
 export const Logo = () => {
   return (
-    <div>
-      <img src={logoPicture} alt="logo" />
-    </div>
+    <>
+      <img src={logoPicture} alt="logo" className={css.logo} />
+    </>
   );
 };
