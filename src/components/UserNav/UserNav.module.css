@@ -1,0 +1,56 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.navigationLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 12px;
+  border-radius: 5px;
+
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.navigationLink:hover:not(.active),
+.navigationLink:focus-visible:not(.active) {
+  color: #1e1e1e;
+  background-color: rgba(191, 191, 191, 0.5);
+}
+
+.navigationLink.active {
+  color: #fefefe;
+  background-color: #1e1e1e;
+}
+
+.signOutButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 12px 12px;
+
+  font-size: 16px;
+  text-align: center;
+
+  color: #010101;
+  background-color: #ededed;
+
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.signOutButton:hover,
+.signOutButton:focus {
+  color: #1e1e1e;
+  background-color: rgba(191, 191, 191, 0.5);
+}
