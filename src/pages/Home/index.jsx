@@ -9,7 +9,7 @@ import { getAllCharacters, getCharacterByName } from 'services/rick&mortyAPI';
 
 import css from './Home.module.css';
 
-export const Home = () => {
+const Home = () => {
   const [characters, setCharacters] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get('query');
@@ -46,3 +46,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home;
