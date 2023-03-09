@@ -6,7 +6,7 @@ import { getOneCharacter } from 'services/rick&mortyAPI';
 
 import css from './CharacterDetails.module.css';
 
-export const CharacterDetails = () => {
+const CharacterDetails = () => {
   const { id } = useParams();
   const location = useLocation();
   const [character, setCharacter] = useState(null);
@@ -74,3 +74,5 @@ export const CharacterDetails = () => {
     </main>
   );
 };
+
+export default CharacterDetails;
