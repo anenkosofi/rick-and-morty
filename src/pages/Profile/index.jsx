@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { UserAuth } from 'components/Context/AuthContext';
 import { getOneCharacter } from 'services/rick&mortyAPI';
@@ -9,12 +9,14 @@ const Profile = () => {
   const { user } = UserAuth();
   const [character, setCharacter] = useState(null);
 
-  const id = Math.floor(Math.random() * (183 - 1) + 1);
-  const getResult = async id => {
-    const data = await getOneCharacter(id);
-    setCharacter(data);
-  };
-  getResult(id);
+  useEffect(() => {
+    const id = Math.floor(Math.random() * (183 - 1) + 1);
+    const getResult = async id => {
+      const data = await getOneCharacter(id);
+      setCharacter(data);
+    };
+    getResult(id);
+  }, []);
 
   if (!character) {
     return;
